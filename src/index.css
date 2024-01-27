@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Spectral:wght@400&display=swap");
+
+body {
+  padding: 0px;
+  margin: 0px;
+  font-family: Spectral, sans-serif;
+  background-color: rgb(254, 246, 246);
+}
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}

@@ -1,0 +1,252 @@
+.header {
+  padding-top: 1rem;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  transition: 1s;
+  z-index: 1000;
+}
+.header.scrolled {
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  z-index: 1000;
+  padding-bottom: 15px;
+}
+.header.scrolled a h1 {
+  color: rgb(0, 0, 0);
+}
+.header.scrolled input {
+  background-color: grey;
+  color: black;
+}
+.header.scrolled input::placeholder {
+  color: black;
+}
+.header a h1 {
+  margin: 0px;
+  display: flex;
+  align-items: center;
+  margin-left: 3rem;
+  font-size: xx-large;
+}
+.header a h1 span {
+  margin-left: 5px;
+}
+.header a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin-right: 2.2rem;
+}
+.header-links {
+  display: flex;
+  align-items: center;
+  padding-bottom: 5px;
+}
+.searchInput {
+  height: 2.3rem;
+  width: 20%;
+  border: 1px solid grey;
+  border-radius: 10px;
+  text-align: center;
+  font-size: medium;
+  transition: 0.3s;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.searchInput:hover {
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.599);
+}
+.searchInput:focus {
+  text-align: left;
+  border-radius: 12px;
+  border: 2px solid rgba(49, 49, 49, 0.293);
+  color: black;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.599);
+}
+.searchInput:focus::placeholder {
+  color: transparent;
+}
+.burger-menu {
+  padding-top: 10px;
+  margin-right: 3rem;
+}
+.header-cart {
+  padding-top: 10px;
+}
+
+.footer {
+  background-color: rgb(36, 36, 36);
+  height: fit-content;
+  padding-bottom: 5vh;
+}
+.footer-mail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4vh;
+}
+.footerMailLabel {
+  font-size: 1rem;
+  width: 40%;
+  margin-bottom: 2.5vh;
+  color: white;
+}
+.footer-mail section {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  height: 3rem;
+}
+.footer-mail input {
+  width: 70%;
+  height: 85%;
+  border: 1px solid rgb(77, 77, 77);
+  outline: hidden;
+}
+.footer-mail button {
+  cursor: pointer;
+  transition: 0.3s;
+  border: 0px;
+  height: 100%;
+  border-left: 0px;
+  background-color: black;
+  color: white;
+  width: 21%;
+  font-size: large;
+}
+.footer-mail button:hover {
+  background-color: rgb(15, 15, 15);
+}
+.mailSent {
+  font-size: large;
+  width: 40%;
+  margin-bottom: 1vh;
+  color: rgb(83, 247, 83);
+}
+.footer p {
+  margin: 0px;
+  margin-top: 7px;
+  font-size: 0.9rem;
+}
+.footer h5 {
+  font-size: 1rem;
+  margin: 0px;
+  margin-bottom: 25px;
+}
+.footer-socials {
+  padding-top: 15px;
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20px;
+  color: grey;
+  margin-bottom: 4vh;
+}
+.footer-socials span {
+  cursor: pointer;
+}
+.footer-row {
+  margin-top: 5rem;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  color: rgb(220, 220, 220);
+}
+
+.footer-SecondRow {
+  margin-top: 5rem;
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  color: rgb(220, 220, 220);
+}
+.footer-SecondRow section {
+  display: flex;
+  flex-direction: column;
+}
+.footer-row section {
+  display: flex;
+  flex-direction: column;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .footer-socials {
+    width: 100%;
+    justify-content: space-around;
+    margin: 0px;
+  }
+  .footer-row {
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  .footer-row section {
+    align-items: center;
+    justify-content: center;
+  }
+  .footer-secondRow {
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  .footer-secondRow section {
+    align-items: center;
+    justify-content: center;
+  }
+  .footer-mail section {
+    width: 85%;
+  }
+  .header {
+    align-items: center;
+  }
+  .header a h1 {
+    margin: 0px;
+    margin-left: 5px;
+    font-size: 1.5rem;
+  }
+  .searchInput {
+    width: 6rem;
+  }
+  .burger-menu {
+    margin-right: 15px;
+  }
+}
+@media (min-width: 950px) {
+  .burger-menu {
+    display: none;
+  }
+}
+@media screen and (max-width: 750px) {
+  .footerMailLabel {
+    width: 70%;
+  }
+  .footer-mail section {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 450px) {
+}
+@media (max-width: 950px) {
+  .header {
+    justify-content: space-between;
+  }
+  .header-links {
+    display: none;
+  }
+}
