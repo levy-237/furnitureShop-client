@@ -41,39 +41,45 @@ export default function Shop() {
   }, [query, numericFiltersQuery, searchInput, paginate]);
   return (
     <div className="shop-page">
-      <img
-        alt="background-image"
-        src={img5}
-        loading="lazy"
-        className="shopImg"
-      ></img>
-      <Sort
-        selectedPrice={selectedPrice}
-        setSelectedPrice={setSelectedPrice}
-        nmProd={nmProd}
-        query={query}
-        setQuery={setQuery}
-      />
+      {data ? (
+        <>
+          <img
+            alt="background-image"
+            src={img5}
+            loading="lazy"
+            className="shopImg"
+          ></img>
+          <Sort
+            selectedPrice={selectedPrice}
+            setSelectedPrice={setSelectedPrice}
+            nmProd={nmProd}
+            query={query}
+            setQuery={setQuery}
+          />
 
-      <div className="shop-layout">
-        <Filter
-          query={query}
-          setQuery={setQuery}
-          selectedPrice={selectedPrice}
-          setSelectedPrice={setSelectedPrice}
-        />
+          <div className="shop-layout">
+            <Filter
+              query={query}
+              setQuery={setQuery}
+              selectedPrice={selectedPrice}
+              setSelectedPrice={setSelectedPrice}
+            />
 
-        <Products
-          data={data}
-          query={query}
-          setQuery={setQuery}
-          selectedPrice={selectedPrice}
-          setSelectedPrice={setSelectedPrice}
-          paginate={paginate}
-          nmProd={nmProd}
-          setPaginate={setPaginate}
-        />
-      </div>
+            <Products
+              data={data}
+              query={query}
+              setQuery={setQuery}
+              selectedPrice={selectedPrice}
+              setSelectedPrice={setSelectedPrice}
+              paginate={paginate}
+              nmProd={nmProd}
+              setPaginate={setPaginate}
+            />
+          </div>
+        </>
+      ) : (
+        <h1>server side error</h1>
+      )}
     </div>
   );
 }
