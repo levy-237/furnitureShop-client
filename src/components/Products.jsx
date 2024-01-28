@@ -18,7 +18,6 @@ export default function Products({
   const [imgDesc, setImgDesc] = useState(null);
   const { searchInput, setSearchInput, rating, setRating, starReviewDisplay } =
     useContext(Context);
-
   const storeObjectId = (id) => {
     const existingId = localStorage.getItem("id");
     if (existingId !== null && existingId !== undefined && existingId !== "") {
@@ -28,9 +27,10 @@ export default function Products({
       const newId = localStorage.setItem("id", id);
     }
   };
-
+  console.log(paginate);
+  console.log(nmProd);
   return (
-    <div style={{ display: "flex", flexDirection: "column" }}>
+    <div className="productLayout-wrapper">
       <div className="selected-filter-div">
         <section className="selected-filters">
           {rating ? (
@@ -96,6 +96,11 @@ export default function Products({
           </Link>
         ))}
       </div>
+      {paginate <= 67 && (
+        <p className="p-paginate" onClick={() => setPaginate(paginate + 37)}>
+          view more...
+        </p>
+      )}
     </div>
   );
 }

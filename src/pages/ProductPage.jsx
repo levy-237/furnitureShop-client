@@ -15,7 +15,7 @@ export default function ProductPage() {
     const fetchData = async () => {
       try {
         const data = await axios.get(
-          `http://localhost:3000/api/v1/products/${id}`
+          `${import.meta.env.VITE_SERVER_URL}/api/v1/products/${id}`
         );
         setData(data.data.product);
         setCurrentImg(data.data.product.image);

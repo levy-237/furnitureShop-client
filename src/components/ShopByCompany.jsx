@@ -9,7 +9,9 @@ export default function ShopByCompany({ currentCompany, setClicked, clicked }) {
     const fetchData = async () => {
       try {
         const data = await axios.get(
-          `http://localhost:3000/api/v1/products?company=${currentCompany}&limit=4`
+          `${
+            import.meta.env.VITE_SERVER_URL
+          }/api/v1/products?company=${currentCompany}&limit=4`
         );
         setCompanyData(data.data.products);
       } catch (error) {

@@ -22,12 +22,14 @@ export default function Shop() {
   const queryString = new URLSearchParams(query).toString();
   const numericFiltersQuery = `numericFilters=price>=${selectedPrice},rating<=${rating}`;
   ///pagination
-  const [paginate, setPaginate] = useState(20);
+  const [paginate, setPaginate] = useState(30);
   useEffect(() => {
     const fetchData = async () => {
       try {
         const data = await axios.get(
-          `http://localhost:3000/api/v1/products?${queryString}&${numericFiltersQuery}&name=${searchInput}&limit=${paginate}`
+          `${
+            import.meta.env.VITE_SERVER_URL
+          }/api/v1/products?${queryString}&${numericFiltersQuery}&name=${searchInput}&limit=${paginate}`
         );
         setNmProd(data.data.nbHits);
         setData(data.data.products);
@@ -68,6 +70,7 @@ export default function Shop() {
           selectedPrice={selectedPrice}
           setSelectedPrice={setSelectedPrice}
           paginate={paginate}
+          nmProd={nmProd}
           setPaginate={setPaginate}
         />
       </div>

@@ -32,7 +32,7 @@ export default function Cart() {
       const promises = idArray.map(async (id) => {
         if (idArray.length >= 1 || idArray === "") {
           const response = await axios.get(
-            `http://localhost:3000/api/v1/products/${id}`
+            `${import.meta.env.VITE_SERVER_URL}/api/v1/products/${id}`
           );
           return response.data;
         } else {
