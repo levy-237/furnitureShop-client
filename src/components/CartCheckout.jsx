@@ -1,5 +1,8 @@
 import { Link } from "react-router-dom";
 export default function CartCheckout({ totalPrice }) {
+  const handleCheckout = () => {
+    alert("checkout is not available yet");
+  };
   return (
     <>
       <div className="cart-checkout">
@@ -9,7 +12,9 @@ export default function CartCheckout({ totalPrice }) {
             <span>{totalPrice ? totalPrice : "0"} EUR</span>
           </section>
           <p>Taxes and shipping calculated at checkout</p>
-          <button className="cart-button">SECURE CHECKOUT</button>
+          <button className="cart-button" onClick={handleCheckout}>
+            SECURE CHECKOUT
+          </button>
         </div>
         <div className="cart-login">
           <h5>
@@ -20,7 +25,7 @@ export default function CartCheckout({ totalPrice }) {
             i have read the <b>Privacy Policy</b>
           </p>
           <button className="cart-button">
-            <Link>CONTINUE SHOPPING</Link>
+            <Link to="/shop">CONTINUE SHOPPING</Link>
           </button>
         </div>
       </div>

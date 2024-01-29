@@ -204,6 +204,7 @@ a {
 
 .cart-page {
   padding-top: 10rem;
+  height: 100vh;
 }
 .server-error {
   margin-top: 30vh;
@@ -232,6 +233,10 @@ a {
   }
 }
 @media (max-width: 750px) {
+  .cart-page {
+    padding-top: 10rem;
+    height: max-content;
+  }
   .cart-div {
     margin-left: 2%;
     margin-right: 2%;

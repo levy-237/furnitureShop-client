@@ -1,4 +1,7 @@
 export default function CartMiniCheckout() {
+  const handleCheckout = () => {
+    alert("checkout is not available yet");
+  };
   return (
     <>
       <div className="cartCheckout-mini">
@@ -6,7 +9,7 @@ export default function CartMiniCheckout() {
           <p>TOTAL</p>
           <span>12 EUR</span>
         </section>
-        <button>CHECK OUT</button>
+        <button onClick={handleCheckout}>CHECK OUT</button>
       </div>
     </>
   );
