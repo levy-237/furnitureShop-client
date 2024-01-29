@@ -45,7 +45,7 @@ export function Header() {
           <IconContext.Provider value={{ size: "40px" }}>
             <PiMediumLogoDuotone />
           </IconContext.Provider>
-          <span>name</span>
+          <span>Furniture</span>
         </h1>
       </Link>
 
