@@ -27,8 +27,7 @@ export default function Products({
       const newId = localStorage.setItem("id", id);
     }
   };
-  console.log(paginate);
-  console.log(nmProd);
+
   return (
     <div className="productLayout-wrapper">
       <div className="selected-filter-div">

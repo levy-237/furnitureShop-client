@@ -205,6 +205,12 @@ a {
 .cart-page {
   padding-top: 10rem;
 }
+.server-error {
+  margin-top: 30vh;
+  margin-bottom: 30vh;
+  text-align: center;
+  font-size: xx-large;
+}
 @keyframes typing {
   from {
     width: 0;

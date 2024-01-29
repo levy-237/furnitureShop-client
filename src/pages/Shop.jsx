@@ -78,7 +78,7 @@ export default function Shop() {
           </div>
         </>
       ) : (
-        <h1>server side error</h1>
+        <h1 className="server-error">server side error</h1>
       )}
     </div>
   );

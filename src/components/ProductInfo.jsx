@@ -90,7 +90,7 @@ export default function ProductInfo({ data }) {
           placeholder="Enter your search email adress"
         />
         <button type="submit" id="search-button">
-          Search
+          SUBMIT
         </button>
       </form>
       <ProductDetails />

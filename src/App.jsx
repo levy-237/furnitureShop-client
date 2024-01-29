@@ -6,6 +6,7 @@ import {
   Link,
   useLocation,
 } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/react";
 import ProductPage from "./pages/ProductPage";
 import "./pages/pages.css";
 import "./components/components.css";
@@ -30,6 +31,7 @@ export default function App() {
   return (
     <>
       <RouterProvider router={router} />
+      <Analytics />
     </>
   );
 }
