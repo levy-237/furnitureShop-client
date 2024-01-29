@@ -60,7 +60,7 @@ export function Header() {
         <span className="header-links">
           <Link>HOME</Link>
           <Link>ABOUT</Link>
-          <Link>SMTH</Link>
+          <Link to="cart">CART</Link>
         </span>
         <span className="header-cart">
           <Link to="cart">
